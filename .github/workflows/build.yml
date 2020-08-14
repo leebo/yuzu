@@ -21,6 +21,7 @@ jobs:
         sudo -E ln -s ~/.local/bin/conan /usr/bin/conan
     - name: configure
       run: |
+        git submodule update --init --recursive
         mkdir build
         cd build
         cmake .. -GNinja
